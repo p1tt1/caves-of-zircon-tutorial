@@ -7,20 +7,23 @@ val mockito_version: String by project
 val assertj_version: String by project
 
 plugins {
-    kotlin("jvm") version "1.4.10"
-    id("com.github.johnrengelman.shadow") version "5.2.0"
+    kotlin("jvm") version "1.9.22"
+    id("com.github.johnrengelman.shadow") version "8.1.1"
 }
 
 repositories {
     mavenLocal()
     mavenCentral()
-    jcenter()
-    maven("https://dl.bintray.com/kotlin/kotlinx")
+    maven("https://repo.kotlin.link")
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_1_8
-    targetCompatibility = JavaVersion.VERSION_1_8
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+kotlin {
+    jvmToolchain(21)
 }
 
 dependencies {
