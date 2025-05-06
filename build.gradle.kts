@@ -41,7 +41,7 @@ tasks {
         archiveVersion.set("")
         mergeServiceFiles()
         manifest {
-            attributes(mapOf("Main-Class" to "com.example.MainKt"))
+            attributes(mapOf("Main-Class" to "com.example.cavesofzircon.MainKt"))
         }
     }
 }
@@ -54,7 +54,7 @@ tasks {
 
 val jar by tasks.getting(Jar::class) {
     manifest {
-        attributes["Main-Class"] = "com.example.MainKt"
+        attributes["Main-Class"] = "com.example.cavesofzircon.MainKt"
     }
 }
 
